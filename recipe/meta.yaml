@@ -14,7 +14,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   script_env:
     - OSX_VARIANT
 
@@ -38,7 +38,7 @@ requirements:
     - toolchain
     - python                     # [win]
     - cmake
-    - boost-cpp
+    - boost-cpp 1.64.*
     - ocl-icd                    # [linux]
     - khronos-opencl-icd-loader  # [win]
 {% if OSX_VARIANT == "pocl" %}
