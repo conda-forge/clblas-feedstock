@@ -14,14 +14,16 @@ Summary: A software library containing BLAS functions written in OpenCL
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/clblas-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/clblas-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/clblas-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/clblas-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/clblas-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/clblas-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/clblas-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/clblas-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/clblas-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/clblas-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/clblas-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/clblas-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/clblas/badges/version.svg)](https://anaconda.org/conda-forge/clblas)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/clblas/badges/downloads.svg)](https://anaconda.org/conda-forge/clblas)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-clblas-green.svg)](https://anaconda.org/conda-forge/clblas) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/clblas.svg)](https://anaconda.org/conda-forge/clblas) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/clblas.svg)](https://anaconda.org/conda-forge/clblas) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/clblas.svg)](https://anaconda.org/conda-forge/clblas) |
 
 Installing clblas
 =================
@@ -66,6 +68,7 @@ To manage the continuous integration and simplify feedstock maintenance
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
+For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========
