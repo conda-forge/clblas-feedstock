@@ -14,7 +14,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   script_env:
     - OSX_VARIANT
 
@@ -28,16 +28,13 @@ build:
 {% if OSX_VARIANT == "pocl" %}
     - osx_pocl_opencl            # [osx]
 {% endif %}
-    - vc9                        # [win and py27]
-    - vc10                       # [win and py34]
-    - vc14                       # [win and py35]
-    - vc14                       # [win and py36]
 
 requirements:
   build:
-    - toolchain
-    - python                     # [win]
     - cmake
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
     - boost-cpp
     - ocl-icd                    # [linux]
     - khronos-opencl-icd-loader  # [win]
@@ -74,7 +71,7 @@ about:
   home: https://github.com/clMathLibraries/{{ name }}
   license: Apache 2.0
   license_file: LICENSE
-  summary: A software library containing BLAS functions written in OpenCL 
+  summary: A software library containing BLAS functions written in OpenCL
 
 extra:
   recipe-maintainers:
