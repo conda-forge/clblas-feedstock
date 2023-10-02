@@ -14,14 +14,11 @@ source:
 
 build:
   number: 5
-  skip: True  # [win and vc<14]
   script_env:
     - OSX_VARIANT
 
 {% if OSX_VARIANT != "native" %}
   skip: True  # [not osx]
-{% else %}
-  skip: True  # [win and py35]
 {% endif %}
 
   features:
@@ -32,6 +29,7 @@ build:
 requirements:
   build:
     - cmake
+    - make  # [linux]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
