@@ -13,15 +13,12 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 4
-  skip: True  # [win and vc<14]
+  number: 5
   script_env:
     - OSX_VARIANT
 
 {% if OSX_VARIANT != "native" %}
   skip: True  # [not osx]
-{% else %}
-  skip: True  # [win and py35]
 {% endif %}
 
   features:
@@ -32,10 +29,11 @@ build:
 requirements:
   build:
     - cmake
+    - make  # [linux]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
-    - boost-cpp
+    - libboost-headers
     - ocl-icd                    # [linux]
     - khronos-opencl-icd-loader  # [win]
 {% if OSX_VARIANT == "pocl" %}
