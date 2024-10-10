@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/clblas-feedstoc
 
 Home: https://github.com/clMathLibraries/clBLAS
 
-Package license: Apache 2.0
+Package license: Apache-2.0
 
 Summary: A software library containing BLAS functions written in OpenCL
 
