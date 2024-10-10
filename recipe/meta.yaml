@@ -68,7 +68,7 @@ test:
 
 about:
   home: https://github.com/clMathLibraries/{{ name }}
-  license: Apache 2.0
+  license: Apache-2.0
   license_file: LICENSE
   summary: A software library containing BLAS functions written in OpenCL
 
