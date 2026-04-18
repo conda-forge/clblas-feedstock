@@ -1,16 +1,14 @@
-{% set name = "clBLAS" %}
 {% set version = "2.12" %}
-{% set sha256 = "7269c7cb06a43c5e96772010eba032e6d54e72a3abff41f16d765a5e524297a9" %}
 
 {% set OSX_VARIANT = os.environ.get("OSX_VARIANT", "native") %}
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: clblas
+  version: "{{ version }}"
 
 source:
-  url: https://github.com/clMathLibraries/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://github.com/clMathLibraries/clBLAS/archive/v{{ version }}.tar.gz
+  sha256: 7269c7cb06a43c5e96772010eba032e6d54e72a3abff41f16d765a5e524297a9
 
 build:
   number: 7
@@ -67,7 +65,7 @@ test:
     - clBLAS-tune --help
 
 about:
-  home: https://github.com/clMathLibraries/{{ name }}
+  home: https://github.com/clMathLibraries/clBLAS
   license: Apache-2.0
   license_file: LICENSE
   summary: A software library containing BLAS functions written in OpenCL
